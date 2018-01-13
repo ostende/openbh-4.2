@@ -11,7 +11,7 @@ from Tools.Directories import resolveFilename, SCOPE_CURRENT_SKIN, SCOPE_SKIN_IM
 from Tools.LoadPixmap import LoadPixmap
 from Plugins.Plugin import PluginDescriptor
 from os import system, listdir, chdir, getcwd, remove as os_remove
-from enigma import eDVBDB
+from enigma import eDVBDB, BT_SCALE
 
 config.misc.fast_plugin_button = ConfigText(default="")
 
@@ -24,7 +24,7 @@ class DeliteGreenPanel(Screen):
 				{"template": [
 				MultiContentEntryText(pos = (125, 0), size = (650, 24), font=0, text = 0),
 				MultiContentEntryText(pos = (125, 24), size = (650, 24), font=1, text = 1),
-				MultiContentEntryPixmapAlphaTest(pos = (6, 5), size = (100, 40), png = 2),
+				MultiContentEntryPixmapAlphaTest(pos = (6, 5), size = (100, 40), png = 2, flags = BT_SCALE),
 				],
 				"fonts": [gFont("Regular", 24),gFont("Regular", 20)],
 				"itemHeight": 50
